@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+==============
+Variables
+============== 
+ */
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main: hsl(217, 54%, 11%);
+    --very-dark-blue-card: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --font-family: 'Outfit', sans-serif;
+    --margin-bottom: 1rem;
+    --transition: all 0.25s linear;
+    --border-radius: 1rem;
+}
+
+/*
+==============
+Global Styles
+============== 
+ */
+body {
+    font-family: var(--font-family);
+    background: var(--very-dark-blue-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h3 {
+    color: var(--white);
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.55rem;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--margin-bottom);
+    transition: var(--transition);
+}
+
+h3:hover{
+    color: var(--cyan);
+}
+
+h4 {
+    color: var(--cyan);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+p {
+    color: var(--soft-blue);
+    font-size: 1.125rem;
+    line-height: 1.65;
+}
+
+span {
+    color: var(--white);
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+span:hover{
+    color: var(--cyan);
+}
+/*
+=======
+End of Global Styles
+======= 
+ */
+
+.container {
+    background: var(--very-dark-blue-card);
+    padding: 1.6rem;
+    max-width: 25rem;
+    border-radius: var(--border-radius);
+}
+
+.img-container {
+    margin-bottom: var(--margin-bottom);
+    background: var(--cyan);
+    position: relative;
+    transition: var(--transition);
+    border-radius: 1.1rem;
+}
+
+.img-container:hover .equilibrium {
+    opacity: 0.5;
+}
+
+.img-container:hover .view {
+    opacity: 1;
+}
+
+.equilibrium {
+    display: block;
+    width: 100%;
+    height: 16.5rem;
+    object-fit: cover;
+    transition: var(--transition);
+    border-radius: var(--border-radius);
+}
+
+
+
+.view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+
+
+.text {
+    max-width: 17.8rem;
+    margin-bottom: var(--margin-bottom);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--margin-bottom);
+}
+
+.currency,
+.time {
+    display: flex;
+    align-items: center;
+}
+
+.etherum,
+.clock {
+    padding-right: 0.5rem;
+}
+
+.line {
+    width: 100%;
+    height: 0.1rem;
+    margin-top: -0.15rem;
+    background: var(--very-dark-blue-line);
+    margin-bottom: var(--margin-bottom);
+}
+
+.about {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    height: 2.25rem;
+    border: 1.5px solid var(--white);
+    border-radius: 50%;
+    margin-right: 1.2rem;
+}
+
+@media screen and (min-width:468px) {
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+}
